@@ -1,23 +1,23 @@
 package ru.coderun.coderuntouristsender.Controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import ru.coderun.coderuntouristsender.MainApplication;
 
-public class Main
-{
+import java.io.IOException;
+import java.net.URL;
 
-    @FXML
-    private AnchorPane mainWindow;
-
-    @FXML
-    private AnchorPane bottomWindow;
+public class Main {
 
     @FXML
     private Button buttonLogin;
@@ -28,15 +28,35 @@ public class Main
     @FXML
     private PasswordField inputPassword;
 
-    private String prevText;
+    @FXML
+    private ImageView logoImage;
 
     @FXML
-    public void onClickButtonLogin(ActionEvent event)
-    {
-        if (!prevText.equals("Нажал")) {
-            prevText = buttonLogin.getText();
+    private AnchorPane mainWindow;
+
+    @FXML
+    private ImageView settingIcon;
+
+    @FXML
+    void onClickButtonLogin(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onClickSettingIcon(MouseEvent event) {
+        settingIcon.getScene().getWindow().hide();
+        Stage main = (Stage)settingIcon.getScene().getWindow();
+        URL fxmlLocation = getClass().getResource("/ru/coderun/coderuntouristsender/main-settings.fxml");
+        FXMLLoader fxmlLoader = new FXMLLoader(fxmlLocation);
+        Parent newWindow;
+        try {
+            newWindow = fxmlLoader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-        buttonLogin.setText(prevText);
+        main.setScene(new Scene(newWindow));
+        main.show();
+
     }
 
 }

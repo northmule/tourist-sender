@@ -34,6 +34,14 @@
                   <Font size="14.0" />
                </font>
             </Label>
+            <ImageView fx:id="settingIcon" fitHeight="23.0" fitWidth="25.0" layoutX="661.0" layoutY="258.0" onMouseClicked="#onClickSettingIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/settings.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
          </children>
       </AnchorPane>
       <ImageView fx:id="logoImage" fitHeight="150.0" fitWidth="200.0" layoutX="250.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">

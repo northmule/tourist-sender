@@ -1,4 +1,4 @@
-package ru.coderun.coderuntouristsender;
+package ru.coderun.touristsender;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +13,7 @@ public class MainApplication extends Application
     @Override
     public void start(Stage stage) throws IOException
     {
-        URL fxmlLocation = getClass().getResource("main-view.fxml");
+        URL fxmlLocation = getClass().getResource("/ru/coderun/touristsender/form/main-view.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(fxmlLocation);
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Suntorini CRM");

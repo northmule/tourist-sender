@@ -1,4 +1,4 @@
-module ru.coderun.coderuntouristsender {
+module ru.coderun.touristsender {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -7,8 +7,8 @@ module ru.coderun.coderuntouristsender {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens ru.coderun.coderuntouristsender to javafx.fxml;
-    exports ru.coderun.coderuntouristsender;
-    exports ru.coderun.coderuntouristsender.Controller;
-    opens ru.coderun.coderuntouristsender.Controller to javafx.fxml;
+    opens ru.coderun.touristsender to javafx.fxml;
+    exports ru.coderun.touristsender;
+    exports ru.coderun.touristsender.Controller;
+    opens ru.coderun.touristsender.Controller to javafx.fxml;
 }

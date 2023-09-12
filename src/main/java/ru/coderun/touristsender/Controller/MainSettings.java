@@ -1,4 +1,4 @@
-package ru.coderun.coderuntouristsender.Controller;
+package ru.coderun.touristsender.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

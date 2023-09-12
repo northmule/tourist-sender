@@ -1,4 +1,4 @@
-package ru.coderun.coderuntouristsender.Entity;
+package ru.coderun.touristsender.Entity;
 
 public class ApplicationSetting
 {
